@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#10243a">
+<meta name="description" content="Find local tradespeople and home services in Pretoria North.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<title>FixIt SA — Local help, done right</title>
+<style>
+:root{--navy:#10243a;--blue:#1769aa;--sky:#eaf4ff;--orange:#ff9d2e;--ink:#172638;--muted:#667789;--line:#e3eaf1;--bg:#f5f8fb;--white:#fff;--green:#17865c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.topbar{background:var(--navy);color:#fff;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:5;box-shadow:0 3px 14px #0b1e3020}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:20px;letter-spacing:-.5px}.brandmark{width:36px;height:36px;border-radius:11px;background:var(--orange);color:var(--navy);display:grid;place-items:center;font-size:22px;font-weight:900}.brand span em{font-style:normal;color:var(--orange)}.location{font-size:12px;color:#c8d9e8;margin-top:3px}.top-actions{display:flex;gap:8px;align-items:center}.btn{border:0;border-radius:11px;padding:11px 15px;font-weight:750;transition:.15s}.btn-primary{background:var(--orange);color:#172638}.btn-primary:hover{filter:brightness(.96);transform:translateY(-1px)}.btn-outline{background:transparent;border:1px solid #ffffff70;color:white}.btn-blue{background:var(--blue);color:white}.btn-light{background:var(--sky);color:var(--blue)}.wrap{max-width:1120px;margin:0 auto;padding:26px 20px 60px}.hero{background:linear-gradient(120deg,#10243a 0%,#174b77 100%);border-radius:24px;padding:34px;color:white;display:grid;grid-template-columns:1.25fr .75fr;gap:20px;overflow:hidden;position:relative}.eyebrow{color:#ffbd6d;text-transform:uppercase;font-weight:800;letter-spacing:1.6px;font-size:11px}.hero h1{font-size:clamp(30px,4.2vw,48px);line-height:1.06;letter-spacing:-1.6px;margin:12px 0}.hero p{color:#d7e5f1;max-width:540px;line-height:1.6;margin-bottom:22px}.searchbar{background:white;border-radius:14px;padding:7px;display:flex;gap:8px;max-width:610px}.searchbar input{border:0;outline:0;min-width:0;flex:1;padding:10px 12px;color:var(--ink)}.hero-side{display:flex;align-items:center;justify-content:center;position:relative}.house-art{width:230px;height:210px;border-radius:30px;background:#ffffff10;border:1px solid #ffffff20;display:grid;place-items:center;font-size:104px;transform:rotate(4deg)}.float-note{position:absolute;background:white;color:var(--ink);border-radius:13px;padding:12px 14px;box-shadow:0 10px 30px #06172b40;font-size:12px;font-weight:800}.float-note small{display:block;color:var(--muted);font-weight:500;margin-top:3px}.note-one{left:-4px;bottom:12px}.note-two{right:-2px;top:12px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 15px}.section-head h2{font-size:22px;letter-spacing:-.5px;margin:0}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.text-link{color:var(--blue);font-size:13px;font-weight:800;background:none;border:0}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.category{border:1px solid var(--line);background:white;border-radius:17px;padding:17px;text-align:left;min-height:128px;transition:.16s}.category:hover,.category.active{border-color:#7db8eb;box-shadow:0 6px 20px #1769aa12;transform:translateY(-2px)}.category.active{background:#f0f8ff}.cat-icon{width:43px;height:43px;border-radius:13px;background:var(--sky);display:grid;place-items:center;font-size:23px;margin-bottom:12px}.category strong{display:block;font-size:14px}.category small{display:block;color:var(--muted);margin-top:5px;line-height:1.35}.content-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:18px;margin-top:24px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:20px}.panel h3{margin:0 0 5px;font-size:18px}.sub{font-size:13px;color:var(--muted);margin:0 0 16px}.artisan-list{display:grid;gap:11px}.artisan{border:1px solid var(--line);border-radius:14px;padding:13px;display:grid;grid-template-columns:48px 1fr auto;gap:12px;align-items:center}.avatar{width:48px;height:48px;border-radius:14px;background:#eaf4ff;display:grid;place-items:center;font-size:25px}.artisan h4{margin:0 0 4px;font-size:14px}.artisan p{margin:0;color:var(--muted);font-size:12px;line-height:1.45}.stars{color:#bd7200;font-size:12px;font-weight:800;margin-top:5px}.verified{display:inline-block;background:#e5f7ef;color:#13734d;font-size:10px;font-weight:800;padding:3px 7px;border-radius:99px;margin-left:5px}.artisan .btn{padding:9px 11px;font-size:12px;white-space:nowrap}.trust-list{display:grid;gap:14px;margin-top:17px}.trust-item{display:flex;gap:11px;align-items:flex-start}.trust-icon{width:34px;height:34px;border-radius:11px;background:#eef8f3;color:var(--green);display:grid;place-items:center;flex-shrink:0}.trust-item strong{font-size:13px;display:block;margin:1px 0 3px}.trust-item span{font-size:12px;color:var(--muted);line-height:1.45}.subscription{margin-top:22px;background:#fff5e8;border:1px solid #ffe1b8;border-radius:17px;padding:18px}.subscription h3{margin:0 0 6px}.price{font-size:27px;font-weight:900;letter-spacing:-.8px}.price small{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0}.subscription p{font-size:12px;color:#6f5a41;line-height:1.5}.subscription .btn{width:100%;margin-top:5px}.bottom-cta{margin-top:24px;background:white;border:1px solid var(--line);border-radius:18px;padding:19px 21px;display:flex;justify-content:space-between;align-items:center;gap:14px}.bottom-cta h3{margin:0 0 5px}.bottom-cta p{margin:0;color:var(--muted);font-size:13px}.footer{padding:22px 10px 0;text-align:center;color:#8492a0;font-size:11px;line-height:1.6}.pill{display:inline-flex;align-items:center;gap:6px;background:#ffffff20;border:1px solid #ffffff25;border-radius:99px;padding:7px 10px;font-size:11px;font-weight:700}.hidden{display:none!important}.empty{padding:20px;border:1px dashed var(--line);border-radius:13px;color:var(--muted);font-size:13px}
+.modal-backdrop{position:fixed;inset:0;background:#0a1a2bd1;display:grid;place-items:center;padding:16px;z-index:20}.modal{background:white;border-radius:20px;width:min(560px,100%);max-height:92vh;overflow:auto;box-shadow:0 20px 80px #0003}.modal-head{padding:21px 22px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}.modal-head h2{margin:0;font-size:21px}.modal-head p{margin:5px 0 0;font-size:13px;color:var(--muted)}.close{border:0;background:#edf2f6;border-radius:10px;width:35px;height:35px;font-size:20px}.modal-body{padding:20px 22px 23px}.field{display:grid;gap:6px;margin-bottom:14px}.field label{font-size:12px;font-weight:800;color:#394b5d}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #d8e2eb;border-radius:10px;outline:0;background:white;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{border-color:#69a9df;box-shadow:0 0 0 3px #1769aa12}.field textarea{min-height:82px;resize:vertical}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-note{font-size:11px;color:var(--muted);line-height:1.5;margin:12px 0}.success{text-align:center;padding:24px 8px}.success-icon{font-size:44px}.success h3{font-size:22px;margin:12px 0 6px}.success p{font-size:13px;color:var(--muted);line-height:1.6}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;padding:12px 16px;border-radius:12px;z-index:30;box-shadow:0 8px 24px #0002;font-size:13px;max-width:90vw}
+@media(max-width:760px){.topbar{padding:12px 14px}.top-actions .btn-outline{display:none}.wrap{padding:16px 13px 40px}.hero{padding:25px 20px;grid-template-columns:1fr}.hero-side{display:none}.hero h1{font-size:36px}.searchbar{flex-wrap:wrap}.searchbar input{flex-basis:100%;padding:10px}.searchbar .btn{width:100%}.categories{grid-template-columns:repeat(2,1fr);gap:9px}.category{padding:13px;min-height:116px}.content-grid{grid-template-columns:1fr}.section-head{margin-top:25px}.bottom-cta{align-items:flex-start;flex-direction:column}.bottom-cta .btn{width:100%}.artisan{grid-template-columns:42px 1fr;gap:10px}.avatar{width:42px;height:42px}.artisan .btn{grid-column:2;justify-self:start}.two-col{grid-template-columns:1fr;gap:0}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <div class="brand"><div class="brandmark">F</div><span>FixIt <em>SA</em></span></div>
+    <div class="location">📍 Pretoria North · Local services</div>
+  </div>
+  <div class="top-actions">
+    <button class="btn btn-outline" id="artisanLogin">I'm an artisan</button>
+    <button class="btn btn-primary" id="postJobTop">＋ Post a job</button>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Local help, done right</div>
+      <h1>What do you need<br>fixed today?</h1>
+      <p>Find local professionals for home repairs, installations and maintenance. Tell us what you need and start comparing quotes.</p>
+      <div class="searchbar">
+        <input id="searchInput" type="search" placeholder="Try “gas stove installation” or “leaking tap”" aria-label="Search services">
+        <button class="btn btn-primary" id="searchBtn">Find an artisan →</button>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:15px"><span class="pill">✓ Local service providers</span><span class="pill">✓ Compare quotes</span><span class="pill">✓ Review profiles</span></div>
+    </div>
+    <div class="hero-side">
+      <div class="house-art">🏡</div>
+      <div class="float-note note-one">🛠️ Local professionals<small>For the jobs on your list</small></div>
+      <div class="float-note note-two">💬 Get quotes<small>Compare before you book</small></div>
+    </div>
+  </section>
+
+  <div class="section-head">
+    <div><h2>What service do you need?</h2><p>Choose a category to find the right kind of help.</p></div>
+    <button class="text-link" id="allServices">View all services ↗</button>
+  </div>
+  <section class="categories" id="categories">
+    <button class="category" data-category="Electrical"><div class="cat-icon">⚡</div><strong>Electrical</strong><small>Faults, plugs, lights & DB boards</small></button>
+    <button class="category" data-category="Plumbing"><div class="cat-icon">🚰</div><strong>Plumbing</strong><small>Taps, pipes, drains & geysers</small></button>
+    <button class="category" data-category="Gas installation"><div class="cat-icon">🔥</div><strong>Gas installation</strong><small>Gas stoves, geysers & inspections</small></button>
+    <button class="category" data-category="Building & renovations"><div class="cat-icon">🧱</div><strong>Building & renovations</strong><small>Brickwork, repairs & alterations</small></button>
+    <button class="category" data-category="Painting"><div class="cat-icon">🎨</div><strong>Painting</strong><small>Interior and exterior painting</small></button>
+    <button class="category" data-category="Handyman"><div class="cat-icon">🔧</div><strong>Handyman</strong><small>Small repairs and installations</small></button>
+    <button class="category" data-category="Property maintenance"><div class="cat-icon">🏘️</div><strong>Property maintenance</strong><small>Landlords and property managers</small></button>
+    <button class="category" data-category="Other services"><div class="cat-icon">➕</div><strong>Other services</strong><small>Tell us what else you need</small></button>
+  </section>
+
+  <section class="content-grid">
+    <div class="panel">
+      <h3 id="artisanHeading">Popular local services</h3>
+      <p class="sub" id="artisanSub">Example profiles shown for this prototype.</p>
+      <div class="artisan-list" id="artisanList">
+        <article class="artisan" data-trade="Electrical">
+          <div class="avatar">⚡</div><div><h4>BrightSpark Electrical <span class="verified">DEMO PROFILE</span></h4><p>Electrical repairs · Installations · Pretoria North</p><div class="stars">★★★★★ <span style="color:#738394;font-weight:500">Example profile</span></div></div><button class="btn btn-light quoteBtn" data-trade="Electrical">Request quote</button>
+        </article>
+        <article class="artisan" data-trade="Plumbing">
+          <div class="avatar">🚰</div><div><h4>Reliable Plumbing Co. <span class="verified">DEMO PROFILE</span></h4><p>Leaks · Geysers · Blocked drains · Nearby areas</p><div class="stars">★★★★★ <span style="color:#738394;font-weight:500">Example profile</span></div></div><button class="btn btn-light quoteBtn" data-trade="Plumbing">Request quote</button>
+        </article>
+        <article class="artisan" data-trade="Gas installation">
+          <div class="avatar">🔥</div><div><h4>SafeFlame Gas Services <span class="verified">DEMO PROFILE</span></h4><p>Gas appliances · Installations · Safety checks</p><div class="stars">★★★★★ <span style="color:#738394;font-weight:500">Example profile</span></div></div><button class="btn btn-light quoteBtn" data-trade="Gas installation">Request quote</button>
+        </article>
+        <article class="artisan" data-trade="Handyman">
+          <div class="avatar">🔧</div><div><h4>Neighbourhood Handyman <span class="verified">DEMO PROFILE</span></h4><p>Household repairs · Assembly · General maintenance</p><div class="stars">★★★★★ <span style="color:#738394;font-weight:500">Example profile</span></div></div><button class="btn btn-light quoteBtn" data-trade="Handyman">Request quote</button>
+        </article>
+      </div>
+      <div id="noResults" class="empty hidden">No matching example profiles. Post a job and we can add the right service category.</div>
+    </div>
+    <aside>
+      <div class="panel">
+        <h3>Built around trust</h3><p class="sub">Features planned for the full platform.</p>
+        <div class="trust-list">
+          <div class="trust-item"><div class="trust-icon">✓</div><div><strong>Credential checks</strong><span>Review relevant trade credentials before marking providers as verified.</span></div></div>
+          <div class="trust-item"><div class="trust-icon">📷</div><div><strong>Show us the problem</strong><span>Customers can attach photos and explain what needs doing.</span></div></div>
+          <div class="trust-item"><div class="trust-icon">💬</div><div><strong>Compare quotations</strong><span>Make it easier to understand offers before choosing an artisan.</span></div></div>
+        </div>
+      </div>
+      <div class="subscription">
+        <h3>Are you an artisan?</h3>
+        <div class="price">R99 <small>/ month · proposed plan</small></div>
+        <p>Create a profile and get discovered by customers looking for local services. Subscription payments are not active in this prototype.</p>
+        <button class="btn btn-primary" id="joinArtisan">Register your interest →</button>
+      </div>
+    </aside>
+  </section>
+
+  <section class="bottom-cta">
+    <div><h3>Need help with a job?</h3><p>Describe the work and choose the service you need. This demo will show a confirmation on your device.</p></div>
+    <button class="btn btn-blue" id="postJobBottom">＋ Request a quote</button>
+  </section>
+  <footer class="footer">FixIt SA · Prototype for Pretoria North, South Africa<br>Demo only: example providers are fictional. No real jobs are sent, no accounts are created and no payments are processed.</footer>
+</main>
+
+<div class="modal-backdrop hidden" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal-head"><div><h2 id="modalTitle">Request a quote</h2><p id="modalSub">Tell us what you need help with.</p></div><button class="close" id="closeModal" aria-label="Close">×</button></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+const categories = ["Electrical","Plumbing","Gas installation","Building & renovations","Painting","Handyman","Property maintenance","Other services"];
+let selectedCategory = "";
+let toastTimer;
+const $ = id => document.getElementById(id);
+function showToast(message){const t=$("toast");t.textContent=message;t.classList.remove("hidden");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.add("hidden"),3200);}
+function openModal(title,sub,body){$("modalTitle").textContent=title;$("modalSub").textContent=sub;$("modalBody").innerHTML=body;$("modalBackdrop").classList.remove("hidden");}
+function closeModal(){$("modalBackdrop").classList.add("hidden");}
+function jobForm(defaultTrade=""){
+ const opts=categories.map(c=>`<option ${c===defaultTrade?"selected":""} value="${c}">${c}</option>`).join("");
+ return `<form id="jobForm">
+ <div class="field"><label for="jobTrade">SERVICE NEEDED *</label><select id="jobTrade" required>${opts}</select></div>
+ <div class="field"><label for="jobTitle">WHAT NEEDS TO BE DONE? *</label><input id="jobTitle" required placeholder="e.g. Install a gas stove"></div>
+ <div class="field"><label for="jobDetails">DESCRIBE THE JOB</label><textarea id="jobDetails" placeholder="Tell the artisan what is happening, any measurements or details..."></textarea></div>
+ <div class="two-col"><div class="field"><label for="jobArea">AREA / SUBURB *</label><input id="jobArea" required placeholder="e.g. Pretoria North"></div><div class="field"><label for="jobWhen">WHEN DO YOU NEED HELP?</label><select id="jobWhen"><option>As soon as possible</option><option>Within a few days</option><option>Flexible / planning ahead</option></select></div></div>
+ <div class="two-col"><div class="field"><label for="jobName">YOUR NAME *</label><input id="jobName" required placeholder="Full name"></div><div class="field"><label for="jobPhone">PHONE NUMBER *</label><input id="jobPhone" required type="tel" placeholder="e.g. 08x xxx xxxx"></div></div>
+ <p class="form-note">Prototype only: this form does not send your details anywhere. A live version will need secure storage, privacy notices and a way to contact participating artisans.</p>
+ <button class="btn btn-blue" type="submit" style="width:100%">Preview job request →</button></form>`;
+}
+function artisanForm(){return `<form id="artisanForm">
+ <div class="field"><label for="businessName">BUSINESS / ARTISAN NAME *</label><input id="businessName" required placeholder="Your business name"></div>
+ <div class="two-col"><div class="field"><label for="artisanTrade">MAIN TRADE *</label><select id="artisanTrade" required>${categories.map(c=>`<option>${c}</option>`).join("")}</select></div><div class="field"><label for="artisanArea">SERVICE AREA *</label><input id="artisanArea" required placeholder="Pretoria North"></div></div>
+ <div class="field"><label for="artisanPhone">PHONE NUMBER *</label><input id="artisanPhone" required type="tel" placeholder="Your contact number"></div>
+ <div class="field"><label for="artisanEmail">EMAIL (OPTIONAL)</label><input id="artisanEmail" type="email" placeholder="you@example.com"></div>
+ <div class="field"><label for="artisanAbout">SERVICES / EXPERIENCE</label><textarea id="artisanAbout" placeholder="Briefly describe your services and experience"></textarea></div>
+ <p class="form-note">The R99/month plan is only a proposed price. No subscription is charged in this demo. Gas and regulated trade credentials would need appropriate verification before a provider can be labelled verified.</p>
+ <button class="btn btn-blue" type="submit" style="width:100%">Preview artisan registration →</button></form>`;}
+function confirmation(title,body,details){return `<div class="success"><div class="success-icon">✅</div><h3>${title}</h3><p>${body}</p><div style="background:#f3f7fa;border-radius:12px;padding:13px;text-align:left;font-size:13px;line-height:1.7;margin:16px 0">${details}</div><button class="btn btn-blue" id="doneBtn" style="width:100%">Done</button></div>`;}
+function openJob(defaultTrade=""){openModal("Request a quote","Tell us what you need help with.",jobForm(defaultTrade));$("jobForm").addEventListener("submit",e=>{e.preventDefault();const trade=$("jobTrade").value,title=$("jobTitle").value.trim(),area=$("jobArea").value.trim(),when=$("jobWhen").value,name=$("jobName").value.trim();$("modalBody").innerHTML=confirmation("Job request preview",`Thanks, ${escapeHtml(name)}. Your sample request is ready to review. In the full app, this would be sent to suitable artisans.`,`<strong>Service:</strong> ${escapeHtml(trade)}<br><strong>Job:</strong> ${escapeHtml(title)}<br><strong>Area:</strong> ${escapeHtml(area)}<br><strong>Timing:</strong> ${escapeHtml(when)}<br><br><em>This is not a live booking.</em>`);$("doneBtn").addEventListener("click",closeModal);});}
+function openArtisan(){openModal("Join FixIt SA","Register your interest as a local service provider.",artisanForm());$("artisanForm").addEventListener("submit",e=>{e.preventDefault();const name=$("businessName").value.trim(),trade=$("artisanTrade").value,area=$("artisanArea").value.trim();$("modalBody").innerHTML=confirmation("Registration preview",`${escapeHtml(name)}, your sample artisan profile has been prepared.`,`<strong>Trade:</strong> ${escapeHtml(trade)}<br><strong>Service area:</strong> ${escapeHtml(area)}<br><strong>Plan:</strong> Proposed R99/month<br><br><em>No account has been created and no payment has been taken.</em>`);$("doneBtn").addEventListener("click",closeModal);});}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function filterProfiles(query="",trade=""){query=query.toLowerCase().trim();let shown=0;document.querySelectorAll(".artisan").forEach(card=>{const text=card.textContent.toLowerCase();const matchTrade=!trade||card.dataset.trade===trade;const matchText=!query||text.includes(query)||card.dataset.trade.toLowerCase().includes(query)||({"gas":"gas installation","electrician":"electrical","plumber":"plumbing","builder":"building & renovations"}[query]||"").split("|").includes(card.dataset.trade.toLowerCase());card.classList.toggle("hidden",!(matchTrade&&matchText));if(matchTrade&&matchText)shown++;});$("noResults").classList.toggle("hidden",shown>0);$("artisanHeading").textContent=trade?`${trade} services`:query?`Results for “${query}”`:"Popular local services";$("artisanSub").textContent=shown?`${shown} example profile${shown===1?"":"s"} shown. Profiles are fictional demo data.`:"No matching demo profiles. Try another search or post a job.";}
+document.querySelectorAll(".category").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".category").forEach(b=>b.classList.remove("active"));btn.classList.add("active");selectedCategory=btn.dataset.category;filterProfiles("",selectedCategory);}));
+document.querySelectorAll(".quoteBtn").forEach(btn=>btn.addEventListener("click",()=>openJob(btn.dataset.trade)));
+$("searchBtn").addEventListener("click",()=>{const q=$("searchInput").value;document.querySelectorAll(".category").forEach(b=>b.classList.remove("active"));filterProfiles(q);if(!q.trim())showToast("Choose a service category or enter a search term.");});
+$("searchInput").addEventListener("keydown",e=>{if(e.key==="Enter")$("searchBtn").click();});
+$("allServices").addEventListener("click",()=>{document.querySelector("#categories").scrollIntoView({behavior:"smooth",block:"start"});showToast("Choose from all eight service categories.");});
+$("postJobTop").addEventListener("click",()=>openJob(selectedCategory));$("postJobBottom").addEventListener("click",()=>openJob(selectedCategory));$("joinArtisan").addEventListener("click",openArtisan);$("artisanLogin").addEventListener("click",openArtisan);
+$("closeModal").addEventListener("click",closeModal);$("modalBackdrop").addEventListener("click",e=>{if(e.target===$("modalBackdrop"))closeModal();});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+</script>
+<script>if("serviceWorker" in navigator && location.protocol.startsWith("http")){window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js").catch(()=>{}));}</script>
+</body>
+</html>
